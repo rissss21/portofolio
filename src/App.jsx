@@ -20,13 +20,14 @@ function App() {
   const aboutRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
-useEffect(() => {
-    const isReload = performance.getEntriesByType("navigation")[0]?.type === "reload";
-    const basePath = import.meta.env.BASE_URL; // "/portofolio/" di GitHub Pages
-    
-    // Kalau reload dan bukan di halaman root, redirect ke halaman root
-    if (isReload && window.location.pathname !== basePath) {
-      window.location.replace(basePath);
+  useEffect(() => {
+    const isReload =
+      performance.getEntriesByType("navigation")[0]?.type === "reload";
+
+    if (isReload) {
+      // Ambil path tanpa hash
+      const baseUrl = window.location.origin + "/portofolio/";
+      window.location.replace(baseUrl);
     }
   }, []);
 
