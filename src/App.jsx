@@ -22,8 +22,8 @@ function App() {
 
 useEffect(() => {
     const isReload = performance.getEntriesByType("navigation")[0]?.type === "reload";
-    if (isReload && window.location.pathname !== "/") {
-      window.location.href = "/";
+    if (isReload && window.location.pathname !== process.env.PUBLIC_URL + "/") {
+      window.location.href = process.env.PUBLIC_URL + "/";
     }
   }, []);
 
