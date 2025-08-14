@@ -178,7 +178,7 @@ export const listProyek = [
     subtitle: "HTML CSS Javascript AOS",
     borderColor: "#3B82F6",
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
-    url: "https://github.com/sarahjohnson",
+    url: "https://github.com/rissss21",
     dad: "100",
   },
   {
@@ -188,7 +188,7 @@ export const listProyek = [
     subtitle: "HTML CSS Javascript AOS Swiper Lightbox Gallery",
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
-    url: "https://linkedin.com/in/mikechen",
+    url: "https://github.com/rissss21",
     dad: "200",
   },
   {
@@ -198,7 +198,7 @@ export const listProyek = [
     subtitle: "Vite ReactJS TailwindCSS AOS",
     borderColor: "#3B82F6",
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
-    url: "https://github.com/sarahjohnson",
+    url: "https://github.com/rissss21",
     dad: "300",
   },
   {
@@ -208,7 +208,7 @@ export const listProyek = [
     subtitle: "Vite ReactJS Bootstrap AOS",
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
-    url: "https://linkedin.com/in/mikechen",
+    url: "https://github.com/rissss21",
     dad: "400",
   },
     {
@@ -218,7 +218,7 @@ export const listProyek = [
     subtitle: "HTML CSS Javascript Bootsrap",
     borderColor: "#3B82F6",
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
-    url: "https://github.com/sarahjohnson",
+    url: "https://github.com/rissss21",
     dad: "500",
   },
   {
@@ -228,7 +228,7 @@ export const listProyek = [
     subtitle: "NextJS TailwindCSS Framermotion",
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
-    url: "https://linkedin.com/in/mikechen",
+    url: "https://github.com/rissss21",
     dad: "600",
   },
 ];

@@ -20,15 +20,22 @@ function App() {
   const aboutRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
+useEffect(() => {
+    const isReload = performance.getEntriesByType("navigation")[0]?.type === "reload";
+    if (isReload && window.location.pathname !== "/") {
+      window.location.href = "/";
+    }
+  }, []);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect(); // stop observing setelah muncul sekali
+          observer.disconnect();
         }
       },
-      { threshold: 0.2 } // 20% bagian terlihat baru animasi jalan
+      { threshold: 0.2 }
     );
 
     if (aboutRef.current) {
@@ -37,7 +44,6 @@ function App() {
 
     return () => observer.disconnect();
   }, []);
-
 
   return (
     <>
@@ -180,7 +186,7 @@ function App() {
         <p className="text-base/loose text-center opacity-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">Showcasing a selection of projects that reflect my skills, creativity, and passion for building meaningful digital experiences.</p>
         <div className="proyek-box mt-14" >
          
-              <div style={{ height:'700px', position: 'relative' }} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-once="true" >
+              <div style={{ height:'auto', position: 'relative' }} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-once="true" >
                 <ChromaGrid 
                   items={listProyek}
                   radius={500}
