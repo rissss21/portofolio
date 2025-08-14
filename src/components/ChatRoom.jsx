@@ -102,7 +102,7 @@ export default function ChatRoom() {
 
       {/* Form login / kirim pesan */}
       {user ? (
-        <form onSubmit={sendMessage} className="flex gap-2">
+        <form onSubmit={sendMessage} className="flex gap-2 w-full flex-wrap sm:flex-nowrap">
           <input
             type="text"
             value={message}
@@ -112,7 +112,7 @@ export default function ChatRoom() {
           />
           <button
             type="submit"
-            className="bg-green-600 px-4 py-2 rounded-lg text-white hover:bg-green-700"
+            className="bg-green-600 px-4 py-2 rounded-lg text-white hover:bg-green-700 w-full sm:w-auto"
           >
             Send
           </button>

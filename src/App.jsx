@@ -22,10 +22,11 @@ function App() {
 
 useEffect(() => {
     const isReload = performance.getEntriesByType("navigation")[0]?.type === "reload";
-    const basePath = import.meta.env.BASE_URL; // di Vite, ini otomatis jadi "/portofolio/"
+    const basePath = import.meta.env.BASE_URL; // "/portofolio/" di GitHub Pages
     
+    // Kalau reload dan bukan di halaman root, redirect ke halaman root
     if (isReload && window.location.pathname !== basePath) {
-      window.location.href = basePath;
+      window.location.replace(basePath);
     }
   }, []);
 
