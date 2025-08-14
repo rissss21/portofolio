@@ -102,13 +102,13 @@ export default function ChatRoom() {
 
       {/* Form login / kirim pesan */}
       {user ? (
-        <form onSubmit={sendMessage} className="flex gap-2 w-full flex-wrap sm:flex-nowrap">
+        <form onSubmit={sendMessage} className="flex gap-2 flex-wrap sm:flex-nowrap w-full">
           <input
             type="text"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             placeholder="Ketik pesan..."
-            className="flex-1 p-2 rounded-lg bg-zinc-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="flex-1 min-w-0 p-2 rounded-lg bg-zinc-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           <button
             type="submit"
