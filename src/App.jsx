@@ -22,8 +22,10 @@ function App() {
 
 useEffect(() => {
     const isReload = performance.getEntriesByType("navigation")[0]?.type === "reload";
-    if (isReload && window.location.pathname !== process.env.PUBLIC_URL + "/") {
-      window.location.href = process.env.PUBLIC_URL + "/";
+    const basePath = import.meta.env.BASE_URL; // di Vite, ini otomatis jadi "/portofolio/"
+    
+    if (isReload && window.location.pathname !== basePath) {
+      window.location.href = basePath;
     }
   }, []);
 
