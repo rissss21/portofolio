@@ -2,8 +2,10 @@ import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import "./ChromaGrid.css";
 
+// Terima `onItemClick` di props
 export const ChromaGrid = ({
   items,
+  onItemClick, // Fungsi handler dari App.jsx
   className = "",
   radius = 300,
   columns = 3,
@@ -18,63 +20,8 @@ export const ChromaGrid = ({
   const setY = useRef(null);
   const pos = useRef({ x: 0, y: 0 });
 
-  const demo = [
-    {
-      image: "https://i.pravatar.cc/300?img=8",
-      title: "Alex Rivera",
-      subtitle: "Full Stack Developer",
-      handle: "@alexrivera",
-      borderColor: "#4F46E5",
-      gradient: "linear-gradient(145deg, #4F46E5, #000)",
-      url: "https://github.com/",
-    },
-    {
-      image: "https://i.pravatar.cc/300?img=11",
-      title: "Jordan Chen",
-      subtitle: "DevOps Engineer",
-      handle: "@jordanchen",
-      borderColor: "#10B981",
-      gradient: "linear-gradient(210deg, #10B981, #000)",
-      url: "https://linkedin.com/in/",
-    },
-    {
-      image: "https://i.pravatar.cc/300?img=3",
-      title: "Morgan Blake",
-      subtitle: "UI/UX Designer",
-      handle: "@morganblake",
-      borderColor: "#F59E0B",
-      gradient: "linear-gradient(165deg, #F59E0B, #000)",
-      url: "https://dribbble.com/",
-    },
-    {
-      image: "https://i.pravatar.cc/300?img=16",
-      title: "Casey Park",
-      subtitle: "Data Scientist",
-      handle: "@caseypark",
-      borderColor: "#EF4444",
-      gradient: "linear-gradient(195deg, #EF4444, #000)",
-      url: "https://kaggle.com/",
-    },
-    {
-      image: "https://i.pravatar.cc/300?img=25",
-      title: "Sam Kim",
-      subtitle: "Mobile Developer",
-      handle: "@thesamkim",
-      borderColor: "#8B5CF6",
-      gradient: "linear-gradient(225deg, #8B5CF6, #000)",
-      url: "https://github.com/",
-    },
-    {
-      image: "https://i.pravatar.cc/300?img=60",
-      title: "Tyler Rodriguez",
-      subtitle: "Cloud Architect",
-      handle: "@tylerrod",
-      borderColor: "#06B6D4",
-      gradient: "linear-gradient(135deg, #06B6D4, #000)",
-      url: "https://aws.amazon.com/",
-    },
-  ];
-  const data = items?.length ? items : demo;
+  // Gunakan `items` yang di-pass dari App.jsx, bukan data demo
+  const data = items?.length ? items : [];
 
   useEffect(() => {
     const el = rootRef.current;
@@ -115,12 +62,6 @@ export const ChromaGrid = ({
     });
   };
 
-  const handleCardClick = (url) => {
-    if (url) {
-      window.open(url, "_blank", "noopener,noreferrer");
-    }
-  };
-
   const handleCardMove = (e) => {
     const card = e.currentTarget;
     const rect = card.getBoundingClientRect();
@@ -149,12 +90,13 @@ export const ChromaGrid = ({
           key={i}
           className="chroma-card"
           onMouseMove={handleCardMove}
-          onClick={() => handleCardClick(c.url)}
+          // Panggil `onItemClick` saat kartu diklik dan kirim datanya
+          onClick={() => onItemClick(c)}
           style={
             {
               "--card-border": c.borderColor || "transparent",
               "--card-gradient": c.gradient,
-              cursor: c.url ? "pointer" : "default",
+              cursor: "pointer", // Selalu pointer karena akan membuka modal
             }
           }
         >
