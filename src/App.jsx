@@ -85,7 +85,7 @@ function App() {
               <ShinyText text="Hi I'm Faris Edrik Prayoga" disabled={false} speed={3} className='custom-class' />
             </h1>
             <BlurText
-              text="Pengembang aplikasi dan web yang berfokus pada desain modern, performa tinggi, dan solusi berbasis teknologi terkini. Berpengalaman membangun aplikasi mobile, website interaktif, serta mengintegrasikan AI dan Machine Learning untuk menciptakan inovasi yang bermanfaat."
+              text="A passionate application and web developer dedicated to crafting modern, high-performance digital experiences through innovative and user-friendly solutions."
               delay={150}
               animateBy="words"
               direction="top"
