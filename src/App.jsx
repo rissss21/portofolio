@@ -20,15 +20,12 @@ function App() {
   const aboutRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
-  // --- STATE UNTUK MODAL ---
   const [selectedProject, setSelectedProject] = useState(null); // null = modal tertutup
 
-  // Fungsi untuk membuka modal dengan data proyek yang diklik
   const handleProjectClick = (project) => {
     setSelectedProject(project);
   };
 
-  // Fungsi untuk menutup modal
   const handleCloseModal = () => {
     setSelectedProject(null);
   };
@@ -216,7 +213,6 @@ function App() {
         <div className="proyek-box mt-14" >
 
           <div style={{ height: 'auto', position: 'relative' }} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-once="true" >
-            {/* --- UBAH PROPS PADA CHROMAGRID --- */}
             <ChromaGrid
               items={listProyek}
               onItemClick={handleProjectClick} // Kirim fungsi untuk handle klik
@@ -318,7 +314,6 @@ function App() {
         {/* Kontak */}
       </main>
 
-      {/* --- RENDER KOMPONEN MODAL DI SINI --- */}
       <ProjectModal
         isOpen={!!selectedProject}
         onClose={handleCloseModal}
