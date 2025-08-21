@@ -1,4 +1,4 @@
-# Portofolio Web — [Faris Edrik P / rissss21]
+# Portofolio Web — [ALDY]
 
 Selamat datang di portofolio web pribadi saya! 🌐  
 Dibuat dengan React + Vite, ini adalah showcase dari project, skill, dan karya yang ingin saya bagikan.
