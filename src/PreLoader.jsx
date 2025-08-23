@@ -1,4 +1,4 @@
-import Aurora from "./Aurora"
+import Aurora from "./components/Aurora.jsx"
 import { useState, useEffect } from "react"
 import CountUp from "./CountUp/CountUp"
 
