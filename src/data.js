@@ -6,25 +6,25 @@ const Image = {
 
 export default Image;
 
-import Tools1 from "/assets/tools/vscode.png";
-import Tools2 from "/assets/tools/reactjs.png";
-import Tools3 from "/assets/tools/nextjs.png";
-import Tools4 from "/assets/tools/tailwind.png";
-import Tools5 from "/assets/tools/bootstrap.png";
-import Tools6 from "/assets/tools/js.png";
-import Tools7 from "/assets/tools/nodejs.png";
-import Tools8 from "/assets/tools/github.png";
-import Tools9 from "/assets/tools/ai.png";
-import Tools10 from "/assets/tools/canva.png";
-import Tools11 from "/assets/tools/figma.png";
-import Tools12 from "/assets/tools/kotlin.png";
-import Tools13 from "/assets/tools/firebase.png";
-import Tools14 from "/assets/tools/html.png";
-import Tools15 from "/assets/tools/css.png";
-import Tools16 from "/assets/tools/ts.png";
-import Tools17 from "/assets/tools/php.png";
-import Tools18 from "/assets/tools/vite.png";
-import Tools19 from "/assets/tools/mysql.png";
+import Tools1 from "/assets/vscode.png";
+import Tools2 from "/assets/reactjs.png";
+import Tools3 from "/assets/nextjs.png";
+import Tools4 from "/assets/tailwind.png";
+import Tools5 from "/assets/bootstrap.png";
+import Tools6 from "/assets/js.png";
+import Tools7 from "/assets/nodejs.png";
+import Tools8 from "/assets/github.png";
+import Tools9 from "/assets/ai.png";
+import Tools10 from "/assets/canva.png";
+import Tools11 from "/assets/figma.png";
+import Tools12 from "/assets/kotlin.png";
+import Tools13 from "/assets/firebase.png";
+import Tools14 from "/assets/html.png";
+import Tools15 from "/assets/css.png";
+import Tools16 from "/assets/ts.png";
+import Tools17 from "/assets/php.png";
+import Tools18 from "/assets/vite.png";
+import Tools19 from "/assets/mysql.png";
 
 
 export const listTools = [
