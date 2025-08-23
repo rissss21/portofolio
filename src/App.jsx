@@ -1,15 +1,15 @@
 import { useRef, useState, useEffect } from "react";
-import ProfileCard from "./components/ProfileCard/ProfileCard";
-import ShinyText from "./components/ShinyText/ShinyText";
-import BlurText from "./components/BlurText/BlurText";
-import ScrambledText from "./components/ScrambledText/ScrambledText";
-import SplitText from "./components/SplitText/SplitText";
-import Lanyard from "./components/Lanyard/Lanyard";
-import GlassIcons from "./components/GlassIcons/GlassIcons";
+import ProfileCard from "./components/ProfileCard";
+import ShinyText from "./components/ShinyText";
+import BlurText from "./components/BlurText";
+import ScrambledText from "./components/ScrambledText";
+import SplitText from "./components/SplitText";
+import Lanyard from "./components/Lanyard";
+import GlassIcons from "./components/GlassIcons";
 import { listTools, listProyek } from "./data";
-import ChromaGrid from "./components/ChromaGrid/ChromaGrid";
-import ProjectModal from "./components/ProjectModal/ProjectModal"; // <-- IMPORT MODAL
-import Aurora from "./components/Aurora/Aurora";
+import ChromaGrid from "./components/ChromaGrid";
+import ProjectModal from "./components/ProjectModal"; // <-- IMPORT MODAL
+import Aurora from "./components/Aurora";
 import AOS from 'aos';
 import ChatRoom from "./components/ChatRoom";
 import 'aos/dist/aos.css'; // You can also use <link> for styles
